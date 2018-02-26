@@ -1,2 +1,2 @@
 # itsinyourcode
-Examples pf itsinyourcode.com
+Examples of itsinyourcode.com
