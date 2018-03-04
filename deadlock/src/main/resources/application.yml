@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: deadlock
+  datasource:
+    url: jdbc:sqlserver://localhost:1433;databaseName=deadlock
+    username: test
+    password: test
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate.dialect: org.hibernate.dialect.SQLServer2012Dialect
