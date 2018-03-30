@@ -25,7 +25,7 @@ import org.springframework.transaction.annotation.Transactional;
 @DataJpaTest
 @AutoConfigureTestDatabase(replace = Replace.NONE)
 @Transactional(propagation = Propagation.NOT_SUPPORTED)
-public class DocumentRepositoryTest {
+public class ParallelMergeDeadlockTest {
 
 	@Autowired
 	private DocumentRepository documentRepository;
@@ -50,7 +50,7 @@ public class DocumentRepositoryTest {
 	}
 
 	@Test
-	public void multi_thread_merge() {
+	public void multiThreadedMerge() {
 		// Merge in parallel by adding image to eachh document
 		documents.stream().parallel()
 			.forEach(document -> {
