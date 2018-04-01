@@ -17,7 +17,7 @@ public class DocumentService {
 	private final DocumentRepository documentRepository;
 
 	@Transactional(propagation = Propagation.REQUIRES_NEW)
-	public Document processDocumentInNewTransaction(Document document) {
+	public Document generateName(Document document) {
 
 		// Merge
 		final Document attached = documentRepository.save(document);

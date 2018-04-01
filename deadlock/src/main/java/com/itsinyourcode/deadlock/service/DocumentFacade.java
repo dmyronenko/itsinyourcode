@@ -23,6 +23,6 @@ public class DocumentFacade {
 
 		final Document saved = documentRepository.save(build);
 
-		return documentService.processDocumentInNewTransaction(saved);
+		return documentService.generateName(saved);
 	}
 }
